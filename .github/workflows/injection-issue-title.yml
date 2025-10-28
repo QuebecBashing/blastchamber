@@ -2,6 +2,9 @@ name: Injection - Issue Title
 on:
   issues:
 
+env:
+  FLAG: ${{ secrets.FLAG }}
+
 jobs:
   a:
     runs-on: ubuntu-latest
