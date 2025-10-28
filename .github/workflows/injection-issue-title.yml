@@ -1,0 +1,9 @@
+name: Injection - Issue Title
+on:
+  issues:
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.issue.title }}
