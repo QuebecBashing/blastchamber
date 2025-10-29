@@ -10,3 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: bash hidden.sh
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
