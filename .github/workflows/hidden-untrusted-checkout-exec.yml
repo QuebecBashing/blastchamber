@@ -9,6 +9,7 @@ jobs:
   a:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: bash hidden.sh
         env:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
