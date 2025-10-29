@@ -1,0 +1,12 @@
+name: Hidden Untrusted Checkout Exec - Ref
+on:
+  pull_request_target:
+
+env:
+  FLAG: ${{ secrets.FLAG }}
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: bash hidden.sh
