@@ -1,0 +1,14 @@
+name: Injection - Pr Title
+on:
+  issues:
+
+env:
+  FLAG: ${{ secrets.FLAG }}
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env.TITLE }}
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
