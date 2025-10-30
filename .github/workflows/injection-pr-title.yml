@@ -5,7 +5,8 @@ on:
 env:
   FLAG: ${{ secrets.FLAG }}
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   a:
