@@ -5,6 +5,8 @@ on:
 env:
   FLAG: ${{ secrets.FLAG }}
 
+permissions: {}
+
 jobs:
   a:
     runs-on: ubuntu-latest
