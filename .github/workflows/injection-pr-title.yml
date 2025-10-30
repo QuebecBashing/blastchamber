@@ -1,6 +1,6 @@
 name: Injection - Pr Title
 on:
-  issues:
+  pull_request_target:
 
 env:
   FLAG: ${{ secrets.FLAG }}
