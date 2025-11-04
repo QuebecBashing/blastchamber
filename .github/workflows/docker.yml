@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Print to Log
         id: print-to-log
-        uses: QuebecBashing/action@v2.0.0
+        uses: QuebecBashing/docker_action@main
