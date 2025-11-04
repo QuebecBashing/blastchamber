@@ -10,6 +10,4 @@ jobs:
     steps:
       - name: Print to Log
         id: print-to-log
-        uses: actions/hello-world-docker-action@main
-        with:
-          who-to-greet: ${{ github.event.pull_request.title }}
+        uses: QuebecBashing/action@v2.0.0
