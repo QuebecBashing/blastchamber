@@ -1,0 +1,16 @@
+name: Injection - Issue Comment Body
+on:
+  issue_comment:
+
+env:
+  FLAG: ${{ secrets.FLAG }}
+
+permissions: {}
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ env.BODY }}
+        env:
+          BODY: ${{ github.event.comment.body }}
