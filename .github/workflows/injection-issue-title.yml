@@ -14,7 +14,3 @@ jobs:
       TITLE: ${{ github.event.issue.title }}
     steps:
       - run: echo ${{ env.TITLE }}
-      - uses: actions/github-script@v8
-        with:
-          script: |
-            console.log("${{ env.TITLE }}");
