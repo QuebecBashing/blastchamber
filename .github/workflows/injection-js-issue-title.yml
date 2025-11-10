@@ -1,0 +1,19 @@
+name: Injection Js - Issue Title
+on:
+  issues:
+
+env:
+  FLAG: ${{ secrets.FLAG }}
+
+permissions: {}
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    env:
+      TITLE: ${{ github.event.issue.title }}
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            console.log("${{ env.TITLE }}");
