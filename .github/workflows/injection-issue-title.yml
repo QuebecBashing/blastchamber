@@ -10,7 +10,11 @@ permissions: {}
 jobs:
   a:
     runs-on: ubuntu-latest
+    env:
+      TITLE: ${{ github.event.issue.title }}
     steps:
       - run: echo ${{ env.TITLE }}
-        env:
-          TITLE: ${{ github.event.issue.title }}
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            console.log("${{ env.TITLE }}");
