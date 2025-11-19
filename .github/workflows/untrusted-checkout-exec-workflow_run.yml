@@ -1,0 +1,18 @@
+name: Hidden Untrusted Checkout Exec - workflow_run
+on:
+  workflow_run:
+
+env:
+  FLAG: ${{ secrets.FLAG }}
+
+permissions:
+  contents: read
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash hidden.sh
+        env:
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
