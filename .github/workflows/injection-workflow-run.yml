@@ -1,0 +1,14 @@
+name: Injection - workflow_run
+
+on:
+  workflow_run:
+    workflows:
+      - trigger
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.workflow_run.head_commit.author.name }}
+      
+      
