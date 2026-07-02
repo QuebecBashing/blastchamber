@@ -1,4 +1,4 @@
-name: Injection - workflow_run
+name: Injection - workflow_runs
 
 on:
   workflow_run:
